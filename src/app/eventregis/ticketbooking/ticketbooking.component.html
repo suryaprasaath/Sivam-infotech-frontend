@@ -1,0 +1,76 @@
+<!-- 
+Name
+Phone number
+Address
+Transport Mode
+Number of ticket
+Destination Date
+Arrival Date
+ -->
+<body style="background-image: url(../../../assets/img/ticket_opacity_reduced.png); background-position: 50%; background-repeat: no-repeat; background-size: 35% auto;">
+    <p class="h3" style="margin-left: 20%; margin-top: 3%;">Ticket Booking</p>
+    <section class="h-100 h-custom">
+      <form action="" [formGroup]="regisform" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-left: 10%; margin-right: 10%; margin-top: 2%; margin-bottom: 2%; padding-top: 5%; padding-bottom: 5%;">
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>Name</p>
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Pranauv.S" name="Name" formControlName="Name" required>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>Mobile Number</p>
+            </div>
+            <div class="col-md-3">
+                <input type="tel" class="form-control"  placeholder="6381382901" name="Mobile" formControlName="Mobile" required >
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>Address</p>
+            </div>
+            <div class="col-md-3">
+                <textarea id="addr" class="form-control" name="Address" formControlName="Address" required cols="30" rows="3"></textarea>
+                <!-- <input type="text" id="addr" class="form-control" name="Address" formControlName="Address" required> -->
+                <label for="addr" style="font-weight:lighter; font-size: small;">(With Pin code)</label>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>Mode of Transport</p>
+            </div>
+            <div class="col-md-3">
+                <input list="MT" name="MOT" class="form-control" formControlName="MOT" required >
+                    <datalist id="MT">
+                        <option value="Bus">
+                        <option value="Train">
+                        <option value="Flight">
+                    </datalist>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>Number of Tickets</p>
+            </div>
+            <div class="col-md-3">
+                <input type="number" class="form-control" name="Number" formControlName="Number" required>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+          <div class="col-md-3">
+            <p>Destination Date and Time</p>
+          </div>
+          <div class="col-md-3">
+              <input type="datetime-local" class="form-control" name="Datetime" formControlName="Datetime" required>
+          </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <button type="submit" class="btn btn-primary btn-lg" (click)="Submit()" [disabled]="this.regisform.invalid">Submit</button>
+            </div>
+        </div>
+      </form>
+    </section>
+  </body>

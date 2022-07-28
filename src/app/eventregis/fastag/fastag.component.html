@@ -1,0 +1,93 @@
+<!-- 
+Name Of Applicant
+Email
+Date of birth
+Pan card
+Vehicle Type
+Vehicle Register Number
+Address
+ -->
+
+ <body style="background-image: url(../../../assets/img/fastag_opacity_reduced.png); background-position: 50%; background-repeat: no-repeat; background-size: 35% auto;">
+    <p class="h3" style="margin-left: 20%; margin-top: 3%;">FASTAG Application Form</p>
+    <section class="h-100 h-custom">
+      <form action="" [formGroup]="regisform" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-left: 10%; margin-right: 10%; margin-top: 2%; margin-bottom: 2%; padding-top: 5%; padding-bottom: 5%;">
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>Name</p>
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Pranauv.S" name="Name" formControlName="Name" required>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>Mobile Number</p>
+            </div>
+            <div class="col-md-3">
+                <input type="tel" class="form-control"  placeholder="6381382901" name="Mobile" formControlName="Mobile" required >
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>E-mail Address</p>
+            </div>
+            <div class="col-md-3">
+                <input type="email" class="form-control" placeholder="example@gmail.com" name="Email" formControlName="Email" required >
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>Date of Birth</p>
+            </div>
+            <div class="col-md-3">
+                <input type="date" class="form-control" name="DOB" formControlName="DOB" required>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>PAN Card</p>
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="xxxxxxxxxx" name="pan" formControlName="Pan" required>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>Vehicle Type</p>
+            </div>
+            <div class="col-md-3">
+                <input list="VT" name="VehicleType" class="form-control" formControlName="VehicleType" required >
+                    <datalist id="VT">
+                        <option value="Two Wheeler">
+                        <option value="Three Wheeler">
+                        <option value="Four Wheeler">
+                    </datalist>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>Vehicle Register Number</p>
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="TN-XX-AB-XXXX" name="RegisterNumber" formControlName="RegisterNumber" required>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>Address</p>
+            </div>
+            <div class="col-md-3">
+                <textarea id="addr" class="form-control" name="Address" formControlName="Address" required cols="30" rows="3"></textarea>
+                <!-- <input type="text" id="addr" class="form-control" name="Address" formControlName="Address" required> -->
+                <label for="addr" style="font-weight:lighter; font-size: small;">(With Pin code)</label>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <button type="submit" class="btn btn-primary btn-lg" (click)="Submit()" [disabled]="this.regisform.invalid">Submit</button>
+            </div>
+        </div>
+      </form>
+    </section>
+  </body>

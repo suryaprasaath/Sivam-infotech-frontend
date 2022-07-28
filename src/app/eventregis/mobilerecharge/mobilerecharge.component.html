@@ -1,0 +1,61 @@
+<!-- 
+Mobile numberr
+Network
+Plan
+Circle
+Type- Prepaid/Postpaid
+ -->
+<body style="background-image: url(../../../assets/img/mobile_recharge_opacity_reduced.png); background-position: 50%; background-repeat: no-repeat; background-size: 25% auto;">
+    <p class="h3" style="margin-left: 20%; margin-top: 3%;">Mobile Recharge</p>
+    <section class="h-100 h-custom">
+      <form action="" [formGroup]="regisform" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-left: 10%; margin-right: 10%; margin-top: 2%; margin-bottom: 2%; padding-top: 5%; padding-bottom: 5%;">
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>Mobile Number</p>
+            </div>
+            <div class="col-md-3">
+                <input type="tel" class="form-control"  placeholder="6381382901" name="Mobile" formControlName="Mobile" required >
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>Network</p>
+            </div>
+            <div class="col-md-3">
+                <input list="Network" name="Network" class="form-control" formControlName="Network" required >
+                    <datalist id="Network">
+                        <option value="Jio">
+                        <option value="Airtel">
+                        <option value="VI">
+                        <option value="BSNL">
+                    </datalist>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>Plan</p>
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" name="Plan" formControlName="Plan" required>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <p>Type</p>
+            </div>
+            <div class="col-md-3">
+                <input list="Type" name="Type" class="form-control" formControlName="Type" required >
+                    <datalist id="Type">
+                        <option value="Prepaid">
+                        <option value="Postpaid">
+                    </datalist>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="line-height: 250%;">
+            <div class="col-md-3">
+              <button type="submit" class="btn btn-primary btn-lg" (click)="Submit()" [disabled]="this.regisform.invalid">Submit</button>
+            </div>
+        </div>
+      </form>
+    </section>
+  </body>

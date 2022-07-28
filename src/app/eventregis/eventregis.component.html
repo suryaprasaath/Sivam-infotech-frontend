@@ -1,0 +1,244 @@
+<!-- Aadhaar Number
+Full name
+Date of Birth
+Mobile number associated with aadhar
+Address
+Required Proof for updation -->
+
+<!-- <body>
+  <p class="h3" style="margin-left: 20%; margin-top: 3%;">Aadhar Update Form</p>
+  <section class="h-100 h-custom">
+    <form action="" [formGroup]="regisform" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-left: 10%; margin-right: 10%; margin-top: 2%; margin-bottom: 2%; padding-top: 5%; padding-bottom: 5%;">
+      <div class="row justify-content-center" style="line-height: 250%;">
+          <div class="col-md-3">
+            <p>Name</p>
+          </div>
+          <div class="col-md-3">
+              <input type="text" class="form-control" placeholder="Pranauv.S" name="Name" formControlName="Name" required>
+          </div>
+      </div>
+      <div class="row justify-content-center" style="line-height: 250%;">
+          <div class="col-md-3">
+            <p>Mobile Number</p>
+          </div>
+          <div class="col-md-3">
+              <input type="tel" class="form-control"  placeholder="638138901" name="Mobile" formControlName="Mobile" required >
+          </div>
+      </div>
+      <div class="row justify-content-center" style="line-height: 250%;">
+          <div class="col-md-3">
+            <p>E-mail Address</p>
+          </div>
+          <div class="col-md-3">
+              <input type="email" class="form-control" placeholder="example@gmail.com" name="Email" formControlName="Email" required >
+          </div>
+      </div>
+      <div class="row justify-content-center" style="line-height: 250%;">
+          <div class="col-md-3">
+            <p>Aadhaar Number</p>
+          </div>
+          <div class="col-md-3">
+              <input type="text" class="form-control" placeholder="xxxx-xxxx-xxxx" name="Aadhaar" formControlName="Aadhaar" required>
+          </div>
+      </div>
+      <div class="row justify-content-center" style="line-height: 250%;">
+          <div class="col-md-3">
+            <p>Date of Birth</p>
+          </div>
+          <div class="col-md-3">
+              <input type="date" class="form-control" name="DOB" formControlName="DOB" required>
+          </div>
+      </div>
+      <div class="row justify-content-center" style="line-height: 250%;">
+          <div class="col-md-3">
+            <p>Address</p>
+          </div>
+          <div class="col-md-3">
+              <textarea id="addr" class="form-control" name="Address" formControlName="Address" required cols="30" rows="3"></textarea>
+              <input type="text" id="addr" class="form-control" name="Address" formControlName="Address" required>
+              <label for="addr" style="font-weight:lighter; font-size: small;">(With Pin code)</label>
+          </div>
+      </div>
+      <div class="row justify-content-center" style="line-height: 250%;">
+          <div class="col-md-3">
+            <button type="submit" class="btn btn-primary btn-lg" (click)="Submit()" [disabled]="this.regisform.invalid">Submit</button>
+          </div>
+      </div>
+    </form>
+  </section>
+</body> -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+<br>
+<br>
+
+<div class="container p-0">
+        <div class="row p-0">
+          <div class="col pt-5" >
+            <div class="container d-flex justify-content-center">
+                <div class="card p-2">
+                    <div class="p-info px-3 py-3">
+                        <div>
+                            <h4 class="mb-0" style="color: #3d3d3dad;">E-services</h4>
+                            <h2 class="mb-0" style="font-weight: 400;">Aadhaar Modification</h2>
+                        </div>
+                    </div>
+                    <div class="text-center p-image"> <img src="./assets/img/aadhaar-logo.png"> </div>
+                    <div class="p-about">
+                        <p style="font-size: 15px;">
+                            <li style="font-size: 15px;font-weight: 500;list-style-type: none;">Services</li>
+                            <li class="pt-2" style="color: #383838fd;">Name Update</li>
+                            <li style="color: #383838fd;">Address Update</li>
+                            <li style="color: #383838fd;">Mobile Number Update</li>
+                        </p>
+                    </div>
+                    <div class="buttons d-flex flex-row gap-3 px-3"> <button class="btn btn-primary h-50"><a routerLink="aadhar" style="text-decoration: none;color: white;font-weight: 500;font-size: 15px;">Update!</a></button> </div>
+                </div>
+            </div>
+          </div>
+          <div class="col pt-5">
+            <div class="container d-flex justify-content-center">
+                <div class="card p-2">
+                    <div class="p-info px-3 py-3">
+                        <div>
+                            <h4 class="mb-0" style="color: #3d3d3dad;">E-services</h4>
+                            <h2 class="mb-0" style="font-weight: 400;">Pan card Modification</h2>
+                        </div>
+                    </div>
+                    <div class="text-center p-image"> <img src="./assets/img/PAN-logo.png"> </div>
+                    <div class="p-about">
+                        <p style="font-size: 15px;">
+                            <li style="font-size: 15px;font-weight: 500;list-style-type: none;">Services</li>
+                            <li style="color: #383838fd;">Minor to Major</li>
+                            <li style="color: #383838fd;">Name change</li>
+                            <li style="color: #383838fd;">Date of Birth change</li>
+                        </p>
+                    </div>
+                    <div class="buttons d-flex flex-row gap-3 px-3"> <button class="btn btn-primary h-50"><a routerLink="pan" style="text-decoration: none;color: white;font-weight: 500;font-size: 15px;">Update!</a></button> </div>
+                </div>
+            </div>
+          </div>
+        </div>
+</div>
+<br>
+<br>
+<div class="container p-0">
+    <div class="row p-0">
+      <div class="col pt-5" >
+        <div class="container d-flex justify-content-center">
+            <div class="card p-2">
+                <div class="p-info px-3 py-3">
+                    <div>
+                        <h4 class="mb-0" style="color: #3d3d3dad;">E-services</h4>
+                        <h2 class="mb-0" style="font-weight: 400;">Passport Application</h2>
+                    </div>
+                </div>
+                <div class="text-center p-image"> <img src="./assets/img/passport-logo.webp"> </div>
+                <div class="p-about">
+                    <p style="font-size: 15px;">
+                        <li style="font-size: 15px;font-weight: 500;list-style-type: none;">Requirements</li>
+                            <li style="color: #383838fd;">Name DOB Address</li>
+                            <li style="color: #383838fd;">Photo</li>
+                            <li style="color: #383838fd;">Pan Details/Voter ID</li>
+                            <li style="color: #383838fd;">Employment Type</li>
+                            <li style="color: #383838fd;">Mobile numberr</li>
+                            <li style="color: #383838fd;">Address</li>
+                            <li style="color: #383838fd;">Required Proof</li>
+                            <li style="color: #383838fd;">Emergency Contact Details</li>    
+                    </p>
+                </div>
+                <div class="buttons d-flex flex-row gap-3 px-3"> <button class="btn btn-primary h-50"><a routerLink="passport" style="text-decoration: none;color: white;font-weight: 500;font-size: 15px;">Apply!</a></button> </div>
+            </div>
+        </div>
+      </div>
+      <div class="col pt-5">
+        <div class="container d-flex justify-content-center">
+            <div class="card p-2">
+                <div class="p-info px-3 py-3">
+                    <div>
+                        <h4 class="mb-0" style="color: #3d3d3dad;">Services</h4>
+                        <h2 class="mb-0" style="font-weight: 400;">Mobile Recharge</h2>
+                    </div>
+                </div>
+                <div class="text-center p-image"> <img src="./assets/img/mobile-recharge-logo.png"> </div>
+                <div class="p-about">
+                    <p style="font-size: 15px;">
+                        <li style="font-size: 15px;font-weight: 500;list-style-type: none;">Requirements</li>
+                            <li style="color: #383838fd;">Mobile number</li>
+                            <li style="color: #383838fd;">Network</li>
+                            <li style="color: #383838fd;">Plan</li>
+                            <li style="color: #383838fd;">Circle</li>
+                            <li style="color: #383838fd;">Type- Prepaid/Postpaid</li>
+                    </p>
+                </div>
+                <div class="buttons d-flex flex-row gap-3 px-3"> <button class="btn btn-primary h-50"><a routerLink="mobilerecharge" style="text-decoration: none;color: white;font-weight: 500;font-size: 15px;">Recharge!</a></button> </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="container p-0">
+    <div class="row p-0">
+      <div class="col pt-5" >
+        <div class="container d-flex justify-content-center">
+            <div class="card p-2">
+                <div class="p-info px-3 py-3">
+                    <div>
+                        <h4 class="mb-0" style="color: #3d3d3dad;">Services</h4>
+                        <h2 class="mb-0" style="font-weight: 400;">Fastag Application</h2>
+                    </div>
+                </div>
+                <div class="text-center p-image"> <img src="./assets/img/fastag-logo.png"> </div>
+                <div class="p-about">
+                    <p style="font-size: 15px;">
+                        <li style="font-size: 15px;font-weight: 500;list-style-type: none;">Requirements</li>
+                        <li style="color: #383838fd;">Vehicle Register Number</li>
+                        <li style="color: #383838fd;">Vehicle Type</li>
+                        <li style="color: #383838fd;">Name Of Applicant</li>
+                        <li style="color: #383838fd;">Address</li>
+                        <li style="color: #383838fd;">Pan card</li>
+                        <li style="color: #383838fd;">Email</li>
+                        <li style="color: #383838fd;">Date of birth</li>
+                    </p>
+                </div>
+                <div class="buttons d-flex flex-row gap-3 px-3"> <button class="btn btn-primary h-50"><a routerLink="fastag" style="text-decoration: none;color: white;font-weight: 500;font-size: 15px;">Apply!</a></button> </div>
+            </div>
+        </div>
+      </div>
+      <div class="col pt-5">
+        <div class="container d-flex justify-content-center">
+            <div class="card p-2">
+                <div class="p-info px-3 py-3">
+                    <div>
+                        <h4 class="mb-0" style="color: #3d3d3dad;">Services</h4>
+                        <h2 class="mb-0" style="font-weight: 400;">Ticket Booking</h2>
+                    </div>
+                </div>
+                <div class="text-center p-image"> <img src="./assets/img/ticket-booking.jpg"> </div>
+                <div class="p-about">
+                    <p style="font-size: 15px;">
+                        <li style="font-size: 15px;font-weight: 500;list-style-type: none;">Requirements</li>
+                        <li style="color: #383838fd;">Number of ticket</li>
+                        <li style="color: #383838fd;">Destination Date</li>
+                        <li style="color: #383838fd;">Arrival Date</li>
+                        <li style="color: #383838fd;">Name</li>
+                        <li style="color: #383838fd;">Address</li>
+                        <li style="color: #383838fd;">Transport Mode</li>
+                        <li style="color: #383838fd;">Phone number</li>
+                </div>
+                <div class="buttons d-flex flex-row gap-3 px-3"> <button class="btn btn-primary h-50"><a routerLink="ticketbooking" style="text-decoration: none;color: white;font-weight: 500;font-size: 15px;">Book Now!</a></button> </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<br><br><br><br>

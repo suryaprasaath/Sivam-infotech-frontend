@@ -1,0 +1,39 @@
+<div class="container">
+    <!-- No data message -->
+    <p *ngIf="Ticket.length <= 0" class="no-data text-center">
+      There is no Ticket added yet!
+    </p>
+  
+    <!-- Employee list -->
+    <div class="mt-5 mb-5">
+    <table class="table table-bordered" *ngIf="Ticket.length > 0">
+      <thead class="table-success">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Mobile</th>
+          <th scope="col">Address</th>
+          <th scope="col">MOT</th>
+          <th scope="col">Number</th>
+          <th scope="col">Datetime</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let Ticket of Ticket; let i = index">
+          <td>{{ Ticket.Name }}</td>
+          <td>{{ Ticket.Mobile }}</td>
+          <td>{{ Ticket.Address }}</td>
+          <td>{{ Ticket.MOT }}</td>
+          <td>{{ Ticket.Number}}</td>
+          <td>{{ Ticket.Datetime | slice:0:15}}</td>
+          <td class="text-center edit-block">
+            <span class="delete" (click)="removeticket(Ticket, i)">
+              <button type="button" class="btn btn-danger btn-sm">Delete</button>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  
