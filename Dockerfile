@@ -1,9 +1,9 @@
-FROM node:14.8.0-stretch AS build
-COPY ./src .
-RUN npm install \
-    && npm run-script test \
-    ** npm run-script build
-
-
-FROM nginx:1.19.2-alpine AS final
-COPY --from=build build/ /usr/local/nginx/html
+FROM node:12-alpine as build-step
+RUN mkdir -p /app
+WORKDIR /app
+COPY package.json /app
+RUN npm install
+COPY . /app
+RUN npm run build
+FROM nginx:1.17.1-alpine
+COPY --from=build /dist/webapp/ /usr/share/nginx/html 
