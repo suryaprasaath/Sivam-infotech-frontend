@@ -10,57 +10,38 @@ import { RegistrationComponent } from './registration/registration.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
-import { AboutComponent } from './about/about.component';
-import { EventComponent } from './event/event.component';
-import { AdminComponent } from './admin/admin.component';
-import { EventregisComponent } from './eventregis/eventregis.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-import { HomeComponent } from './home/home.component';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
+import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
+import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
+import { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';
+import { MdbRadioModule } from 'mdb-angular-ui-kit/radio';
+import { MdbRangeModule } from 'mdb-angular-ui-kit/range';
+import { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';
+import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
+import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
+import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
+import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
+import { HomeComponent } from './home/home.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 // import { AadharComponent } from './aadhar/aadhar.component';
-import { AadharComponent } from './eventregis/aadhar/aadhar.component';
-import { PanComponent } from './eventregis/pan/pan.component';
-import { PassportComponent } from './eventregis/passport/passport.component';
-import { FastagComponent } from './eventregis/fastag/fastag.component';
-import { MobilerechargeComponent } from './eventregis/mobilerecharge/mobilerecharge.component';
-import { TicketbookingComponent } from './eventregis/ticketbooking/ticketbooking.component';
-import { ChatwindowComponent } from './chatwindow/chatwindow.component';
-import { AdminchatComponent } from './adminchat/adminchat.component';
-import { PanlistComponent } from './admin/panlist/panlist.component';
-import { AadharlistComponent } from './admin/aadharlist/aadharlist.component';
-import { FastaglistComponent } from './admin/fastaglist/fastaglist.component';
-import { TicketbookinglistComponent } from './admin/ticketbookinglist/ticketbookinglist.component';
-import { PassportlistComponent } from './admin/passportlist/passportlist.component';
-import { MobilerechargelistComponent } from './admin/mobilerechargelist/mobilerechargelist.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistrationComponent,
-    AboutComponent,
-    EventComponent,
-    EventregisComponent,
     HomeComponent,
-    AadharComponent,
-    PanComponent,
-    PassportComponent,
-    FastagComponent,
-    MobilerechargeComponent,
-    TicketbookingComponent,
-    AdminComponent,
-    ChatwindowComponent,
-    AdminchatComponent,
-    PanlistComponent,
-    AadharlistComponent,
-    FastaglistComponent,
-    TicketbookinglistComponent,
-    PassportlistComponent,
-    MobilerechargelistComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,7 +57,21 @@ import { MobilerechargelistComponent } from './admin/mobilerechargelist/mobilere
     MatInputModule,
     MatSelectModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    MdbAccordionModule,
+    MdbCarouselModule,
+    MdbCheckboxModule,
+    MdbDropdownModule,
+    MdbFormsModule,
+    MdbModalModule,
+    MdbPopoverModule,
+    MdbRadioModule,
+    MdbRangeModule,
+    MdbRippleModule,
+    MdbScrollspyModule,
+    MdbTabsModule,
+    MdbTooltipModule,
+    MdbValidationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

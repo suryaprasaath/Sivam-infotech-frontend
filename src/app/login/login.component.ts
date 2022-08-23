@@ -15,48 +15,44 @@ import { MatDialog } from '@angular/material/dialog';
 export class LoginComponent{
 
   loginform=new FormGroup({
-    Name :new FormControl('',[Validators.required]),
-    Password :new FormControl('',[Validators.required]),
+    name :new FormControl('',[Validators.required]),
+    password :new FormControl('',[Validators.required]),
   });
-  get Password(){
-    return this.loginform.get('Password');
-  }get Name(){
-    return this.loginform.get('Name');
+  get password(){
+    return this.loginform.get('password');
+  }get name(){
+    return this.loginform.get('name');
   };
 res:any;
 err:any;
   constructor(private loginc:RegisService,private router:Router,public dialog: MatDialog) { }
  async login(){
-    this.loginc.userlogin(this.loginform.value).subscribe(
+   this.loginc.userlogin(this.loginform.value).subscribe(
       response  => console.log(this.res=response),
       error  => this.err=error,
-      );
-      await delay(2000);
+      );await  delay(3000);
+
 
       console.log("s"+this.res);
       console.log(JSON.stringify(this.res));
       var user1: Array<string>=[];
       user1.push(JSON.stringify(this.res));
-      if(JSON.stringify(this.res)==='{"message":"positive"}' &&  this.loginform.value.Name=="Admin"){
-        alert("Admin Login Successfull");
-        this.router.navigate(['/admin']);
-        console.log("passed"); 
+      if(JSON.stringify(this.res)==='{"message":"notfound"}' ){
+        alert("User not found!");
+        console.log("user not found"); 
       }
       else if(JSON.stringify(this.res)==='{"message":"positive"}'){
-        alert("Login Successfull");
-        this.router.navigate(['/eregis']);
+        alert("Login Successful!");
+        this.router.navigate(['/products']);
         console.log("passed");
         
       }
       if(JSON.stringify(this.res)==='{"message":"negative"}'){
-        this.router.navigate(['/wpopup']);
         console.log("failed");
-        alert("Invalid Password");
+        alert("Invalid Password!");
       }
   }
 }
-
 function delay(ms: number) {
   return new Promise( resolve => setTimeout(resolve, ms) );
 }
-export class WpopupComponents {}
